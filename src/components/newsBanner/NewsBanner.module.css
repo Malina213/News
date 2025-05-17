@@ -1,0 +1,14 @@
+.banner {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	gap: 12px;
+}
+.banner__title {
+	font-size: 28px;
+}
+
+.banner__desc {
+	font-size: 16px;
+	color: rgba(108, 112, 114, 1);
+}

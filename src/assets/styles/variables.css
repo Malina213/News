@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+:root {
+	/* Colors */
+	--white: white;
+	--grey: grey;
+	--darkest: rgba(9, 10, 10, 1);
+	--lighter: rgb(208, 232, 243);
+}

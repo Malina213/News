@@ -1,0 +1,16 @@
+@import url('./reset.css');
+@import url('./variables.css');
+
+body {
+	font-family: 'Playwrite DK Loopet', cursive;
+	font-size: 1rem;
+	background-color: var(--white);
+	color: var(--darkest);
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	height: 100%;
+}
