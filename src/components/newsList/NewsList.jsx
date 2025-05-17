@@ -1,7 +1,7 @@
 import { NewsItem } from '../newsItem/NewsItem'
 import styles from './NewsList.module.css'
 
-export const NewsList = ({ news }) => {
+const NewsList = ({ news }) => {
 	return (
 		<ul className={styles.list}>
 			{news.map(item => (
@@ -10,3 +10,4 @@ export const NewsList = ({ news }) => {
 		</ul>
 	)
 }
+export default NewsList
