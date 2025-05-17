@@ -1,4 +1,4 @@
-import { Layout } from '../components/Layout/Layout'
+import { Layout } from '../components/layout/Layout'
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import { Home } from '../components/page/Home'
 
