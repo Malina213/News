@@ -1,7 +1,8 @@
 import { NewsItem } from '../newsItem/NewsItem'
 import styles from './NewsList.module.css'
 
-export const NewsList = ({ news }) => {
+// eslint-disable-next-line no-undef
+export default NewsList = ({ news }) => {
 	return (
 		<ul className={styles.list}>
 			{news.map(item => (
