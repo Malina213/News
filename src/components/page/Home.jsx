@@ -1,6 +1,6 @@
 import { useNews } from '../../utils/hooks/useNews'
 import { NewsBanner } from '../newsBanner/NewsBanner'
-import { NewsList } from '../newsList/newsList'
+import { NewsListgit } from '../newsList/newsList'
 export const Home = () => {
 	const { news } = useNews()
 
