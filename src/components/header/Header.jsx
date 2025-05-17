@@ -1,4 +1,4 @@
-import { DateTimeDisplay } from '../DateTimeDisplay/DateTimeDisplay'
+import { DateTimeDisplay } from '../dateTimeDisplay/DateTimeDisplay'
 import { CheckboxThemes } from '../ui/checkboxThemes/CheckboxThemes'
 import styles from './Header.module.css'
 

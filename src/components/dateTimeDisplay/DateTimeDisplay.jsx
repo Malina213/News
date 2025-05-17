@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { formateDate, formateTime } from '../../utils/formateDate'
-import styles from './Date.module.css'
+import styles from './DateTimeDisplay.module.css'
 
 export const DateTimeDisplay = () => {
 	const [now, setNow] = useState(new Date())

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import styles from './CheckboxThemes.module.css'
 
-export function CheckboxThemes() {
+export const CheckboxThemes = () => {
 	const [checked, setChecked] = useState(false)
 
 	return (
