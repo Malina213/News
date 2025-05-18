@@ -1,13 +1,13 @@
 .toggleWrapper {
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	position: relative;
+	font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
 	border-radius: 0.5em;
-	padding: 0.125em;
 	background-image: linear-gradient(to bottom, #d5d5d5, #e8e8e8);
 	box-shadow: 0 1px 1px rgb(255 255 255 / 0.6);
-	font-size: 1.5em;
+	padding: 0.3125rem;
 }
 
 .toggleCheckbox {

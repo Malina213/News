@@ -2,10 +2,14 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	color: var(--cadetblue);
 }
 .time {
-	align-self: start;
-	font-size: 2.8rem;
+	text-align: center;
+	font-size: clamp(1rem, 0.345rem + 3.27vw, 2rem);
 	font-weight: 700;
-	width: 200px;
+	width: clamp(6.875rem, 4.83rem + 10.23vw, 12.5rem);
+}
+.date {
+	font-size: clamp(0.5rem, 0.318rem + 0.91vw, 1rem);
 }
