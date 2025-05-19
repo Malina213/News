@@ -5,7 +5,7 @@ export const formateDate = date => {
 		month: 'long',
 		day: 'numeric'
 	}
-	return date.toLocaleDateString('ru-RU', options)
+	return date.toLocaleDateString('ru', options)
 }
 
 export const formateTime = date => {
@@ -14,5 +14,5 @@ export const formateTime = date => {
 		minute: 'numeric',
 		second: 'numeric'
 	}
-	return date.toLocaleTimeString('ru-RU', options)
+	return date.toLocaleTimeString('ru', options)
 }
