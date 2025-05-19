@@ -2,24 +2,22 @@ import { apiNews } from '../../api/apiNews'
 import { useState, useEffect } from 'react'
 export const useNews = () => {
 	const [news, setNews] = useState([])
-	const [loading, setLoading] = useState(false)
-	const [error, setError] = useState(null)
+	const [isLoading, setLoading] = useState(true)
+	const [isError, setError] = useState(false)
 
 	useEffect(() => {
 		const loadNews = async () => {
-			setLoading(true)
 			try {
+				setLoading(true)
 				const data = await apiNews()
-				console.log(data.news)
 				setNews(data.news)
+				setLoading(false)
 			} catch (error) {
 				setError(error)
-			} finally {
-				setLoading(false)
 			}
 		}
 		loadNews()
 	}, [])
 
-	return { news, loading, error }
+	return { news, isLoading, isError }
 }
