@@ -1,0 +1,35 @@
+.pagination {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.625rem;
+	background-color: white;
+	margin-top: 4rem;
+	padding: 1rem;
+	box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.15);
+	border-radius: 30px;
+}
+.pagination__numbers {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 1.625rem;
+}
+.pagination__button {
+	transition: transform 0.3s ease-in-out;
+}
+.pagination__button:hover {
+	transform: scale(1.2);
+}
+.pagination__prev,
+.pagination__next {
+	color: var(--cadetblue);
+}
+
+.pagination__button:disabled,
+.pagination__prev:disabled,
+.pagination__next:disabled {
+	color: var(--cadetblue);
+	pointer-events: none;
+}
