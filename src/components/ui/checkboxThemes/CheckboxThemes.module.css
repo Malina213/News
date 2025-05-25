@@ -1,8 +1,5 @@
 .toggleWrapper {
 	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	font-size: clamp(1rem, 0.818rem + 0.91vw, 1.5rem);
 	border-radius: 0.5em;
 	background-image: linear-gradient(to bottom, #d5d5d5, #e8e8e8);

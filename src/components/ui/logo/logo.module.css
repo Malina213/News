@@ -9,5 +9,5 @@
 	font-size: clamp(1rem, 0.636rem + 1.82vw, 2rem);
 	font-weight: 700;
 	line-height: 2.25rem;
-	color: var(--cadetblue);
+	color: var(--color-accent);
 }

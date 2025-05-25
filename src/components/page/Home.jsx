@@ -1,11 +1,22 @@
 import { useNews } from '../../utils/hooks/useNews'
+import { useCategories } from '../../utils/hooks/useCategories'
 import { NewsBanner } from '../newsBanner/NewsBanner'
 import { NewsList } from '../newsList/NewsList'
 import { Skeleton } from '../skeleton/Skeleton'
 import { Pagination } from '../pagination/Pagination'
-export const Home = () => {
-	const { news, isLoading, totalPages, currentPage, setCurrentPage } = useNews()
+import { Categories } from '../categories/Categories'
 
+export const Home = () => {
+	const {
+		news,
+		isLoading,
+		totalPages,
+		currentPage,
+		setCurrentPage,
+		selectedCategory,
+		setSelectedCategory
+	} = useNews()
+	const { categories } = useCategories()
 	const handleNextPage = () => {
 		if (currentPage < totalPages) {
 			setCurrentPage(currentPage + 1)
@@ -23,6 +34,11 @@ export const Home = () => {
 	}
 	return (
 		<section>
+			<Categories
+				categories={categories}
+				selectedCategory={selectedCategory}
+				setSelectedCategory={setSelectedCategory}
+			/>
 			{!isLoading && news.length > 0 ? (
 				<NewsBanner banner={news[0]} />
 			) : (

@@ -14,7 +14,7 @@ export const DateTimeDisplay = () => {
 	}, [])
 
 	return (
-		<div className={styles.dateTimeDisplay}>
+		<div className={`flex-center ${styles.dateTimeDisplay}`}>
 			<span className={styles.time}>{formateTime(now)}</span>
 			<p className={styles.date}>{formateDate(now)}</p>
 		</div>
