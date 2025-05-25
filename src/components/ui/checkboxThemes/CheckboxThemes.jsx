@@ -5,7 +5,7 @@ export const CheckboxThemes = () => {
 	const [checked, setChecked] = useState(false)
 
 	return (
-		<div className={styles.toggleWrapper}>
+		<div className={`flex-center ${styles.toggleWrapper}`}>
 			<input
 				type='checkbox'
 				className={styles.toggleCheckbox}
@@ -18,7 +18,7 @@ export const CheckboxThemes = () => {
 					checked ? styles.toggleCheckboxChecked : ''
 				}`}
 			>
-				<div className={styles.toggleButton}>
+				<div className={`flex-center ${styles.toggleButton}`}>
 					<div className={styles.toggleButtonCirclesContainer}></div>
 				</div>
 			</div>

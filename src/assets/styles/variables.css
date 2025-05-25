@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
+
 :root {
-	/* Colors */
-	--white: white;
-	--grey: grey;
-	--darkest: rgba(9, 10, 10, 1);
-	--lighter: rgb(208, 232, 243);
-	--cadetblue: cadetblue;
+	/* Existing variables */
+	--color-background: #ffffff;
+	--сolor-background-white-ligth: #f2f4f5;
+	--color-background-light: #d0e8f3;
+	--color-text-primary: rgba(9, 10, 10, 1);
+	--color-text-secondary: grey;
+	--color-accent: cadetblue;
+	--shadow-black: rgba(0, 0, 0, 0.15);
+
+	/* New accent shades */
+	--color-accent-light-bg: #e7e7ff;
+	--color-accent-hover: #8b77f1;
+	--color-accent-active: #6b4eff;
 }

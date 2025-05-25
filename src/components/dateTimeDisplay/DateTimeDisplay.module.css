@@ -1,8 +1,6 @@
 .dateTimeDisplay {
-	display: flex;
 	flex-direction: column;
-	align-items: center;
-	color: var(--cadetblue);
+	color: var(--color-accent);
 }
 .time {
 	text-align: center;
