@@ -5,6 +5,7 @@ import { NewsList } from '../newsList/NewsList'
 import { Skeleton } from '../skeleton/Skeleton'
 import { Pagination } from '../pagination/Pagination'
 import { Categories } from '../categories/Categories'
+import { Search } from '../search/Search'
 
 export const Home = () => {
 	const {
@@ -14,7 +15,9 @@ export const Home = () => {
 		currentPage,
 		setCurrentPage,
 		selectedCategory,
-		setSelectedCategory
+		setSelectedCategory,
+		keywords,
+		setKeywords
 	} = useNews()
 	const { categories } = useCategories()
 	const handleNextPage = () => {
@@ -39,6 +42,8 @@ export const Home = () => {
 				selectedCategory={selectedCategory}
 				setSelectedCategory={setSelectedCategory}
 			/>
+			<Search keywords={keywords} setKeywords={setKeywords} />
+
 			{!isLoading && news.length > 0 ? (
 				<NewsBanner banner={news[0]} />
 			) : (
