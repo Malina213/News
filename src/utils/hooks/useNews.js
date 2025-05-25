@@ -1,11 +1,14 @@
 import { getNews } from '../../api/api'
 import { useState, useEffect } from 'react'
+import { useDebounce } from './useDebounce'
 export const useNews = () => {
 	const [news, setNews] = useState([])
 	const [isLoading, setIsLoading] = useState(true)
 	const [isError, setIsError] = useState(false)
 	const [currentPage, setCurrentPage] = useState(1)
 	const [selectedCategory, setSelectedCategory] = useState('All')
+	const [keywords, setKeywords] = useState('')
+	const debouncedKeywords = useDebounce(keywords, 1500)
 	const totalPages = 10
 	const pageSize = 10
 
@@ -15,7 +18,8 @@ export const useNews = () => {
 			const data = await getNews({
 				page_number: currentPage,
 				page_size: pageSize,
-				category: selectedCategory === 'All' ? null : selectedCategory
+				category: selectedCategory === 'All' ? null : selectedCategory,
+				keywords: debouncedKeywords
 			})
 			setNews(data.news)
 			setIsLoading(false)
@@ -26,7 +30,7 @@ export const useNews = () => {
 
 	useEffect(() => {
 		loadNews(currentPage)
-	}, [currentPage, selectedCategory])
+	}, [currentPage, selectedCategory, debouncedKeywords])
 
 	return {
 		news,
@@ -36,6 +40,8 @@ export const useNews = () => {
 		currentPage,
 		setCurrentPage,
 		selectedCategory,
-		setSelectedCategory
+		setSelectedCategory,
+		keywords,
+		setKeywords
 	}
 }
