@@ -3,7 +3,7 @@ import styles from './Image.module.css'
 export const Image = ({ image }) => {
 	return (
 		<div className={styles.wrapper}>
-			{image && image !== 'None' ? (
+			{image ? (
 				<img src={image} alt='news' />
 			) : (
 				<img src={notFound} alt='not Found' />

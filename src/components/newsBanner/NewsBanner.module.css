@@ -4,11 +4,3 @@
 	width: 100%;
 	gap: 12px;
 }
-.banner__title {
-	font-size: 1rem;
-}
-
-.banner__desc {
-	font-size: 0.75rem;
-	color: rgba(108, 112, 114, 1);
-}
