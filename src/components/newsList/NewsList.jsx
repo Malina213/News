@@ -1,7 +1,10 @@
+import { withSkeleton } from '../../helpers/hock/withSkeleton'
 import { NewsItem } from '../newsItem/NewsItem'
 import styles from './NewsList.module.css'
 
-export const NewsList = ({ news }) => {
+const NewsList = ({ news }) => {
+	if (!news) return null
+
 	return (
 		<ul className={styles.list}>
 			{news.map(item => (
@@ -10,3 +13,5 @@ export const NewsList = ({ news }) => {
 		</ul>
 	)
 }
+const NewsListWithSkeleton = withSkeleton(NewsList, 'item', 10)
+export default NewsListWithSkeleton
