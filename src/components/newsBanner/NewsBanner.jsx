@@ -1,15 +1,16 @@
-import { formateTimeAgo } from '../../utils/formateTimeAgo'
+import { withSkeleton } from '../../helpers/hock/withSkeleton'
 import { Image } from '../ui/image/Image'
+import { ItemInfo } from '../ui/itemInfo/ItemInfo'
 import styles from './NewsBanner.module.css'
 
 export const NewsBanner = ({ banner }) => {
+	if (!banner) return null
 	return (
 		<div className={styles.banner}>
 			<Image image={banner.image} />
-			<h3 className={styles.banner__title}>{banner.title}</h3>
-			<p className={styles.banner__desc}>
-				{formateTimeAgo(banner.published)} by {banner.author}
-			</p>
+			<ItemInfo item={banner} />
 		</div>
 	)
 }
+const NewsBannerWithSkeleton = withSkeleton(NewsBanner, 'banner', 1)
+export default NewsBannerWithSkeleton

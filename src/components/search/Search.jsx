@@ -1,5 +1,4 @@
 import styles from './Search.module.css'
-
 export const Search = ({ keywords, setKeywords }) => {
 	return (
 		<div className={styles.search}>

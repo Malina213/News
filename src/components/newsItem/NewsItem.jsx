@@ -1,4 +1,4 @@
-import { formateTimeAgo } from '../../utils/formateTimeAgo'
+import { ItemInfo } from '../ui/itemInfo/ItemInfo'
 import styles from './NewsItem.module.css'
 
 export const NewsItem = ({ item }) => {
@@ -11,10 +11,7 @@ export const NewsItem = ({ item }) => {
 				}}
 			></div>
 			<div className={styles.item__info}>
-				<h3 className={styles.item__title}>{item.title}</h3>
-				<p className={styles.item__desc}>
-					{formateTimeAgo(item.published)} by {item.author}
-				</p>
+				<ItemInfo item={item} />
 			</div>
 		</li>
 	)

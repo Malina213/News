@@ -17,6 +17,19 @@ export const Categories = ({
 			slidesPerView='auto'
 			className={styles.categories__swiper}
 		>
+			<SwiperSlide className={styles.categories__slide}>
+				<Button
+					className={
+						!selectedCategory
+							? `flex-center ${styles.category__active} ${styles.category__item}`
+							: `flex-center ${styles.category__item}`
+					}
+					onClick={() => setSelectedCategory(null)}
+				>
+					All
+				</Button>
+			</SwiperSlide>
+
 			{categories.map(category => (
 				<SwiperSlide key={category} className={styles.categories__slide}>
 					<Button
