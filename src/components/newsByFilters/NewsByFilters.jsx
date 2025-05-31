@@ -1,4 +1,4 @@
-import { FiltersControl } from '../filtersControl/filtersControl'
+import { FiltersControl } from '../filtersControl/FiltersControl'
 import { TOTAL_PAGES } from '../../constants/constants'
 import { Pagination } from '../pagination/Pagination'
 import NewsList from '../newsList/NewsList'

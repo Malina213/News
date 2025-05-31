@@ -1,7 +1,7 @@
 import { getCategories } from '../../api/api'
 import { useFetch } from '../../helpers/hooks/useFetch'
 import { Categories } from '../categories/Categories'
-import { Search } from '../../components/search/Search'
+import { Search } from '../search/Search'
 import styles from './FiltersControl.module.css'
 
 export const FiltersControl = ({ filters, changeFilter }) => {

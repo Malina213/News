@@ -1,4 +1,4 @@
-import { withSkeleton } from '../../helpers/hock/withSkeleton'
+import { withSkeleton } from '../../helpers/hock/WithSkeleton'
 import { NewsBanner } from '../newsBanner/NewsBanner'
 import styles from './BannersList.module.css'
 
