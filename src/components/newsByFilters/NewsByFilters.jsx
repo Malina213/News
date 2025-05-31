@@ -2,7 +2,7 @@ import { TOTAL_PAGES } from '../../constants/constants'
 import { Pagination } from '../pagination/Pagination'
 import NewsList from '../newsList/NewsList'
 import styles from './NewsByFilters.module.css'
-import { FiltersControl } from '../filtersControl/FiltersControl'
+import { FiltersControl } from '../filtersControl/filtersControl'
 
 export const NewsByFilters = ({ filters, isLoading, changeFilter, news }) => {
 	const handleNextPage = () => {
@@ -23,7 +23,6 @@ export const NewsByFilters = ({ filters, isLoading, changeFilter, news }) => {
 	return (
 		<section className={styles.newsByFilters}>
 			<FiltersControl filters={filters} changeFilter={changeFilter} />
-
 			<Pagination
 				handlePageClick={handlePageClick}
 				handlePreviousPage={handlePreviousPage}
