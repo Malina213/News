@@ -2,7 +2,7 @@ import { getCategories } from '../../api/api'
 import { useFetch } from '../../helpers/hooks/useFetch'
 import { Categories } from '../categories/Categories'
 import { Search } from '../search/Search'
-import styles from './filtersControl.module.css'
+import styles from './FiltersControl.module.css'
 
 export const FiltersControl = ({ filters, changeFilter }) => {
 	const { data: dataCategories } = useFetch(getCategories)
