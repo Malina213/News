@@ -4,7 +4,7 @@ import { useDebounce } from '../../../helpers/hooks/useDebounce'
 import { getNews } from '../../../api/api'
 import { useFilters } from '../../../helpers/hooks/useFilters'
 import { LatestsNews } from '../../latestsNews/LatestsNews'
-import { NewsByFilters } from '../../NewsByFilters/NewsByFilters'
+import { NewsByFilters } from '../../newsByFilters/NewsByFilters'
 import styles from './Home.module.css'
 
 export const Home = () => {
