@@ -3,7 +3,7 @@ import { PAGE_SIZE } from '../../../constants/constants'
 import { useDebounce } from '../../../helpers/hooks/useDebounce'
 import { getNews } from '../../../api/api'
 import { useFilters } from '../../../helpers/hooks/useFilters'
-import { LatestsNews } from '../../latestsNews/latestsNews'
+import { LatestsNews } from '../../latestsNews/LatestsNews'
 import { NewsByFilters } from '../../NewsByFilters/NewsByFilters'
 import styles from './Home.module.css'
 
