@@ -2,7 +2,6 @@
 	width: 100%;
 	column-gap: clamp(0.635rem, 0.271rem + 1.82vw, 1.635rem);
 	background-color: var(--color-background);
-	margin-top: clamp(2rem, 0.883rem + 4.16vw, 4rem);
 	padding: 1rem;
 	box-shadow: 0 0.5rem 1.25rem var(--shadow-black);
 	border-radius: 30px;

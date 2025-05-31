@@ -1,6 +1,7 @@
 .info__desc {
 	font-size: 12px;
 	color: var(--color-text-secondary);
+	margin-top: auto;
 }
 .item__info {
 	display: flex;
