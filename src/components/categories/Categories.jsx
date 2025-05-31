@@ -1,7 +1,5 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import { Navigation } from 'swiper/modules'
+import React from 'react'
+import Slider from 'react-slick'
 import { Button } from '../ui/button'
 import styles from './Categories.module.css'
 
@@ -10,14 +8,33 @@ export const Categories = ({
 	setSelectedCategory,
 	selectedCategory
 }) => {
+	const settings = {
+		dots: false,
+		infinite: false,
+		speed: 500,
+		slidesToScroll: 3,
+		swipeToSlide: true,
+		arrows: true,
+		variableWidth: true,
+		responsive: [
+			{
+				breakpoint: 1024,
+				settings: { slidesToShow: 3 }
+			},
+			{
+				breakpoint: 768,
+				settings: { slidesToShow: 2 }
+			},
+			{
+				breakpoint: 480,
+				settings: { slidesToShow: 1 }
+			}
+		]
+	}
+
 	return (
-		<Swiper
-			modules={[Navigation]}
-			spaceBetween={10}
-			slidesPerView='auto'
-			className={styles.categories__swiper}
-		>
-			<SwiperSlide className={styles.categories__slide}>
+		<Slider {...settings} className={styles.categories__slider}>
+			<div className={styles.categories__slide}>
 				<Button
 					className={
 						!selectedCategory
@@ -28,10 +45,9 @@ export const Categories = ({
 				>
 					All
 				</Button>
-			</SwiperSlide>
-
+			</div>
 			{categories.map(category => (
-				<SwiperSlide key={category} className={styles.categories__slide}>
+				<div key={category} className={styles.categories__slide}>
 					<Button
 						className={
 							selectedCategory === category
@@ -42,8 +58,8 @@ export const Categories = ({
 					>
 						{category}
 					</Button>
-				</SwiperSlide>
+				</div>
 			))}
-		</Swiper>
+		</Slider>
 	)
 }

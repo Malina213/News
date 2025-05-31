@@ -4,7 +4,6 @@ import { ItemInfo } from '../ui/itemInfo/ItemInfo'
 import styles from './NewsBanner.module.css'
 
 export const NewsBanner = ({ banner }) => {
-	if (!banner) return null
 	return (
 		<div className={styles.banner}>
 			<Image image={banner.image} />

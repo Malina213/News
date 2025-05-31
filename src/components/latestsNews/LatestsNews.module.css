@@ -1,7 +1,7 @@
-.list {
+.section {
 	display: flex;
+	overflow: hidden;
 	flex-direction: column;
 	width: 100%;
-	row-gap: 0.635rem;
-	margin-block: 1rem;
+	gap: 32px;
 }

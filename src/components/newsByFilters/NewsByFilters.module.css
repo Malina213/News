@@ -1,0 +1,8 @@
+.newsByFilters {
+	width: 100%;
+}
+.newsByFilters__slider {
+	width: clamp(20rem, -8.194rem + 64.44vw, 56.25rem);
+	margin: 0 auto;
+	padding: 0 16px;
+}

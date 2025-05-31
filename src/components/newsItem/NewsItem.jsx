@@ -7,7 +7,11 @@ export const NewsItem = ({ item }) => {
 			<div
 				className={styles.wrapper}
 				style={{
-					backgroundImage: `url(${item.image})`
+					backgroundImage: `url(${
+						item.image && item.image !== 'None'
+							? item.image
+							: '/images/notFoundImage.svg'
+					})`
 				}}
 			></div>
 			<div className={styles.item__info}>

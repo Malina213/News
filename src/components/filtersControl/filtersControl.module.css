@@ -1,0 +1,16 @@
+.filtersControl {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+}
+.slider {
+	width: clamp(20rem, -8.194rem + 64.44vw, 56.25rem);
+	margin: 0 auto;
+	padding: 0 16px;
+}
+
+@media (max-width: 900px) {
+	.slider {
+		width: 100%;
+	}
+}

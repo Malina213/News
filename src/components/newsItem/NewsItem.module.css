@@ -6,7 +6,6 @@
 .wrapper {
 	width: 64px;
 	height: 64px;
-	background-color: var(--color-background-light);
 	background-position: center;
 	background-size: cover;
 	flex-shrink: 0;
