@@ -1,6 +1,6 @@
 import { TOTAL_PAGES } from '../../constants/constants'
 import { Pagination } from '../pagination/Pagination'
-import { FiltersControl } from '../filtersControl/FiltersControl'
+import { FiltersControl } from '../filtersControl/FiltersControl.jsx'
 import NewsList from '../newsList/NewsList'
 import styles from './NewsByFilters.module.css'
 
