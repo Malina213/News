@@ -1,5 +1,7 @@
 @import url('./reset.css');
 @import url('./variables.css');
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
 
 body {
 	font-family: 'Playwrite DK Loopet', cursive;
@@ -24,4 +26,8 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.slick-next:before,
+.slick-prev:before {
+	color: var(--color-background-light);
 }

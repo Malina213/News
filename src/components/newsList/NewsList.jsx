@@ -3,11 +3,9 @@ import { NewsItem } from '../newsItem/NewsItem'
 import styles from './NewsList.module.css'
 
 const NewsList = ({ news }) => {
-	if (!news) return null
-
 	return (
-		<ul className={styles.list}>
-			{news.map(item => (
+		<ul className={`${styles.list} no-select`}>
+			{news?.map(item => (
 				<NewsItem item={item} key={item.id} />
 			))}
 		</ul>

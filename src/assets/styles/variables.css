@@ -14,3 +14,12 @@
 	--color-accent-hover: #8b77f1;
 	--color-accent-active: #6b4eff;
 }
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

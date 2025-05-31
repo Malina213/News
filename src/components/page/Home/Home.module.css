@@ -1,0 +1,15 @@
+.home {
+	display: flex;
+	align-items: start;
+	gap: 32px;
+}
+
+.home > * {
+	flex: 1 1 calc(50% - 16px);
+}
+
+@media screen and (max-width: 900px) {
+	.home {
+		flex-wrap: wrap;
+	}
+}
