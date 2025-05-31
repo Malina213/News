@@ -1,4 +1,4 @@
-import { FiltersControl } from '../filtersControl/FiltersControl'
+// import { FiltersControl } from '../filtersControl/FiltersControl'
 import { TOTAL_PAGES } from '../../constants/constants'
 import { Pagination } from '../pagination/Pagination'
 import NewsList from '../newsList/NewsList'
@@ -22,7 +22,7 @@ export const NewsByFilters = ({ filters, isLoading, changeFilter, news }) => {
 	}
 	return (
 		<section className={styles.newsByFilters}>
-			<FiltersControl filters={filters} changeFilter={changeFilter} />
+			{/* <FiltersControl filters={filters} changeFilter={changeFilter} /> */}
 
 			<Pagination
 				handlePageClick={handlePageClick}
