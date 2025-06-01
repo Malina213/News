@@ -14,7 +14,8 @@ export const useFetch = (fetchFunction, params) => {
 				const result = await fetchFunction(params)
 				setData(result)
 			} catch (error) {
-				setIsError(error)
+				console.error('Ошибка ', error)
+				setIsError(true)
 			} finally {
 				setIsLoading(false)
 			}
