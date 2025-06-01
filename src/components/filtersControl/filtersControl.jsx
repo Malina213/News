@@ -6,6 +6,7 @@ import styles from './filtersControl.module.css'
 
 export const FiltersControl = ({ filters, changeFilter }) => {
 	const { data: dataCategories } = useFetch(getCategories)
+
 	return (
 		<div className={styles.filtersControl}>
 			{dataCategories && (
