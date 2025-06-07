@@ -1,6 +1,9 @@
 import notFound from '/public/images/notFoundImage.svg'
 import styles from './Image.module.css'
-export const Image = ({ image }) => {
+interface Props {
+	image: string
+}
+export const Image = ({ image }: Props) => {
 	return (
 		<div className={styles.wrapper}>
 			{image && image != 'None' ? (

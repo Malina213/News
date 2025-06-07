@@ -1,5 +1,5 @@
-export const formateDate = date => {
-	const options = {
+export const formateDate = (date: Date) => {
+	const options: Intl.DateTimeFormatOptions = {
 		weekday: 'long',
 		year: 'numeric',
 		month: 'long',
@@ -8,8 +8,8 @@ export const formateDate = date => {
 	return date.toLocaleDateString('ru', options)
 }
 
-export const formateTime = date => {
-	const options = {
+export const formateTime = (date: Date) => {
+	const options: Intl.DateTimeFormatOptions = {
 		hour: 'numeric',
 		minute: 'numeric',
 		second: 'numeric'
