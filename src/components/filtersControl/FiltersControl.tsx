@@ -3,7 +3,7 @@ import { useFetch } from '../../helpers/hooks/useFetch'
 import type { CategoriesApiResponse, IFilters } from '../../interfaces'
 import { Categories } from '../categories/Categories'
 import { Search } from '../search/Search'
-import styles from './FiltersControl.module.css'
+import styles from './filtersControl.module.css'
 
 interface Props {
 	filters: IFilters
