@@ -1,4 +1,10 @@
-export const paginationHandlers = (filters, changeFilter, TOTAL_PAGES) => {
+import type { IFilters } from '../interfaces'
+
+export const paginationHandlers = (
+	filters: IFilters,
+	changeFilter: (key: keyof IFilters, value: IFilters[keyof IFilters]) => void,
+	TOTAL_PAGES: number
+) => {
 	const handleNextPage = () => {
 		if (filters.page_number < TOTAL_PAGES) {
 			changeFilter('page_number', filters.page_number + 1)
@@ -11,7 +17,7 @@ export const paginationHandlers = (filters, changeFilter, TOTAL_PAGES) => {
 		}
 	}
 
-	const handlePageClick = pageNumber => {
+	const handlePageClick = (pageNumber: number) => {
 		if (pageNumber >= 1) {
 			changeFilter('page_number', pageNumber)
 		}

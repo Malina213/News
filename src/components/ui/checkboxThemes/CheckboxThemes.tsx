@@ -2,7 +2,7 @@ import { useState } from 'react'
 import styles from './CheckboxThemes.module.css'
 
 export const CheckboxThemes = () => {
-	const [checked, setChecked] = useState(false)
+	const [checked, setChecked] = useState<boolean>(false)
 
 	return (
 		<div className={`flex-center ${styles.toggleWrapper}`}>
