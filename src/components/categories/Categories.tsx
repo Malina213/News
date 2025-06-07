@@ -1,13 +1,17 @@
-import React from 'react'
 import Slider from 'react-slick'
 import { Button } from '../ui/button'
 import styles from './Categories.module.css'
-
+import type { CategoriesType } from '../../interfaces'
+interface Props {
+	categories: CategoriesType[]
+	setSelectedCategory: (category: CategoriesType | null) => void
+	selectedCategory: CategoriesType | null
+}
 export const Categories = ({
 	categories,
 	setSelectedCategory,
 	selectedCategory
-}) => {
+}: Props) => {
 	const settings = {
 		dots: false,
 		infinite: false,

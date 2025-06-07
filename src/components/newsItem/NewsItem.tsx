@@ -1,7 +1,11 @@
+import type { INews } from '../../interfaces'
 import { ItemInfo } from '../ui/itemInfo/ItemInfo'
 import styles from './NewsItem.module.css'
 
-export const NewsItem = ({ item }) => {
+interface Props {
+	item: INews
+}
+export const NewsItem = ({ item }: Props) => {
 	return (
 		<li className={styles.item}>
 			<div

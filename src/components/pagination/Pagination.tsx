@@ -2,13 +2,20 @@ import styles from './Pagination.module.css'
 import { SlArrowLeft } from 'react-icons/sl'
 import { SlArrowRight } from 'react-icons/sl'
 import { Button } from '../ui/button'
-import { TOTAL_PAGES } from '../../constants/constants'
+interface Props {
+	handlePageClick: (pageNumber: number) => void
+	handlePreviousPage: () => void
+	handleNextPage: () => void
+	currentPage: number
+	totalPages: number
+}
 export const Pagination = ({
 	handlePageClick,
 	handlePreviousPage,
 	handleNextPage,
-	currentPage
-}) => {
+	currentPage,
+	totalPages
+}: Props) => {
 	return (
 		<div className={`flex-center ${styles.pagination}`}>
 			<Button
@@ -19,7 +26,7 @@ export const Pagination = ({
 				<SlArrowLeft />
 			</Button>
 			<div className={`flex-center ${styles.pagination__numbers}`}>
-				{[...Array(TOTAL_PAGES)].map((_, index) => {
+				{[...Array(totalPages)].map((_, index) => {
 					return (
 						<Button
 							onClick={() => handlePageClick(index + 1)}
@@ -34,7 +41,7 @@ export const Pagination = ({
 			</div>
 			<Button
 				className={styles.pagination__next}
-				disabled={currentPage === TOTAL_PAGES}
+				disabled={currentPage === totalPages}
 				onClick={handleNextPage}
 			>
 				<SlArrowRight />
