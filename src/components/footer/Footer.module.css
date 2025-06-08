@@ -18,3 +18,7 @@
 .footer p:hover {
 	color: var(--color-accent);
 }
+
+.footer__img {
+	color: var(--color-accent);
+}

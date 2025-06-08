@@ -29,7 +29,7 @@
 
 .banner,
 .item {
-	background: linear-gradient(-90deg, #c6e8ef 0%, #a2e1dc24 50%, #9fc0c3 100%);
+	background: var(--background-gradient);
 	background-size: 400% 400%;
 	animation: pulse 1.2s ease-in-out infinite;
 	border-radius: 1.25rem;

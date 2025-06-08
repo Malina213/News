@@ -5,7 +5,7 @@ import styles from './Header.module.css'
 
 export const Header = () => {
 	return (
-		<header className={`${styles.header} no-select`}>
+		<header className={`${styles.header} no-select `}>
 			<Logo />
 			<DateTimeDisplay />
 			<CheckboxThemes />
