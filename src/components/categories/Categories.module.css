@@ -4,7 +4,7 @@
 	border-radius: 32px;
 	background-color: var(--сolor-background-white-ligth);
 	transition: all 0.3s ease-in-out;
-	color: var(--color-text-primary);
+	color: var(--color-categories);
 	margin-right: 10px;
 }
 .category__item:hover {

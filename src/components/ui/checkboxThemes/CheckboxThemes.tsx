@@ -1,21 +1,21 @@
-import { useState } from 'react'
+import { useTheme } from '../../../context/ThemeContext'
 import styles from './CheckboxThemes.module.css'
 
 export const CheckboxThemes = () => {
-	const [checked, setChecked] = useState<boolean>(false)
+	const { isDark, toggleTheme } = useTheme()
 
 	return (
 		<div className={`flex-center ${styles.toggleWrapper}`}>
 			<input
 				type='checkbox'
 				className={styles.toggleCheckbox}
-				checked={checked}
-				onChange={() => setChecked(!checked)}
+				checked={isDark}
+				onChange={toggleTheme}
 				id='toggle'
 			/>
 			<div
 				className={`${styles.toggleContainer} ${
-					checked ? styles.toggleCheckboxChecked : ''
+					isDark ? styles.toggleCheckboxChecked : ''
 				}`}
 			>
 				<div className={`flex-center ${styles.toggleButton}`}>
