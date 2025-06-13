@@ -1,34 +1,28 @@
-import { PAGE_SIZE, TOTAL_PAGES } from '../../constants/constants'
+import { TOTAL_PAGES } from '../../constants/constants'
 import NewsList from '../newsList/NewsList'
-import styles from './NewsByFilters.module.css'
 import { FiltersControl } from '../filtersControl/FiltersControl'
-import { useFilters } from '../../helpers/hooks/useFilters'
-import { useFetch } from '../../helpers/hooks/useFetch'
-import { getNews } from '../../api/api'
 import { useDebounce } from '../../helpers/hooks/useDebounce'
 import { PaginationWrapper } from '../paginationWrapper/PaginationWrapper'
-import { paginationHandlers } from '../../utils/paginationHandlers'
-import type { NewsApiResponse, ParamsType } from '../../interfaces'
+import { useGetNewsQuery } from '../../store/services/newsApi'
+import { useAppSelector } from '../../store'
+import { usePaginationHandlers } from '../../helpers/hooks/usePaginationHandlers'
+import styles from './NewsByFilters.module.css'
 
 export const NewsByFilters = () => {
-	const { filters, changeFilter } = useFilters({
-		page_number: 1,
-		page_size: PAGE_SIZE,
-		category: null,
-		keywords: ''
-	})
+	const filters = useAppSelector(state => state.news.filters)
 	const debouncedKeywords = useDebounce(filters.keywords, 1500)
 
-	const { data, isLoading } = useFetch<NewsApiResponse, ParamsType>(getNews, {
+	const { data, isLoading } = useGetNewsQuery({
 		...filters,
 		keywords: debouncedKeywords
 	})
+
 	const { handleNextPage, handlePreviousPage, handlePageClick } =
-		paginationHandlers(filters, changeFilter, TOTAL_PAGES)
+		usePaginationHandlers(filters, TOTAL_PAGES)
 
 	return (
 		<section className={styles.newsByFilters}>
-			<FiltersControl filters={filters} changeFilter={changeFilter} />
+			<FiltersControl filters={filters} />
 			<PaginationWrapper
 				top
 				bottom

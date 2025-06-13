@@ -15,7 +15,7 @@ export const CheckboxThemes = () => {
 			/>
 			<div
 				className={`${styles.toggleContainer} ${
-					isDark ? styles.toggleCheckboxChecked : ''
+					isDark ? '' : styles.toggleCheckboxChecked
 				}`}
 			>
 				<div className={`flex-center ${styles.toggleButton}`}>
