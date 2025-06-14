@@ -1,0 +1,6 @@
+import type { NewsApiResponse, INews } from './model/types'
+import { NewsBanner } from './ui/newsBanner/NewsBanner'
+import { NewsItem } from './ui/newsItem/NewsItem'
+
+export type { NewsApiResponse, INews }
+export { NewsBanner, NewsItem }
