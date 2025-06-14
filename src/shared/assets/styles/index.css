@@ -1,0 +1,42 @@
+@import './reset.css';
+@import './variables.css';
+@import 'slick-carousel/slick/slick.css';
+@import 'slick-carousel/slick/slick-theme.css';
+
+html {
+	transition:
+		background-color 0.5s ease,
+		color 0.5s ease;
+}
+
+body {
+	font-family: 'Playwrite DK Loopet', cursive;
+	font-size: 1rem;
+	color: var(--color-text-primary);
+	background-color: var(--color-background-light);
+	margin: 10px 20px;
+	transition:
+		background-color 0.5s ease,
+		color 0.5s ease;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.no-select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.slick-next:before,
+.slick-prev:before {
+	color: var(--color-background-light);
+}
