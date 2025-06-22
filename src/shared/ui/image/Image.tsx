@@ -1,16 +1,21 @@
 import notFound from '/public/images/notFoundImage.svg'
 import styles from './Image.module.css'
+import { useState } from 'react'
 interface Props {
-	image: string
+	image?: string | null
+	alt?: string
 }
-export const Image = ({ image }: Props) => {
+
+export const Image = ({ image, alt = 'image' }: Props) => {
+	const [src, setSrc] = useState(image && image !== 'None' ? image : notFound)
+
+	const handleError = () => {
+		setSrc(notFound)
+	}
+
 	return (
 		<div className={styles.wrapper}>
-			{image && image != 'None' ? (
-				<img src={image} alt='news' />
-			) : (
-				<img src={notFound} alt='not Found' />
-			)}
+			<img src={src} alt={alt} onError={handleError} />
 		</div>
 	)
 }

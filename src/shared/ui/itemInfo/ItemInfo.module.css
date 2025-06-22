@@ -3,6 +3,9 @@
 	color: var(--color-text-secondary);
 	margin-top: auto;
 }
+.info__desc span {
+	color: black;
+}
 .item__info {
 	display: flex;
 	flex-direction: column;

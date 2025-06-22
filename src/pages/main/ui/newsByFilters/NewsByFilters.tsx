@@ -18,7 +18,7 @@ export const NewsByFilters = () => {
 	})
 
 	const { handleNextPage, handlePreviousPage, handlePageClick } =
-		usePaginationHandlers(filters, TOTAL_PAGES)
+		usePaginationHandlers(filters)
 
 	return (
 		<section className={styles.newsByFilters}>

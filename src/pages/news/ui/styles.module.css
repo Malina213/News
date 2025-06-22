@@ -1,0 +1,12 @@
+.newsPage {
+	display: flex;
+	align-items: start;
+	gap: 32px;
+}
+
+@media (max-width: 900px) {
+	.home {
+		flex-wrap: wrap;
+		row-gap: 3rem;
+	}
+}

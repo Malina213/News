@@ -1,0 +1,38 @@
+.details {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.categories {
+	margin-top: 2rem;
+	display: flex;
+	align-items: center;
+}
+.item {
+	display: flex;
+	width: 100%;
+	gap: 12px;
+}
+.wrapper {
+	width: 64px;
+	height: 64px;
+	background-position: center;
+	background-size: cover;
+	flex-shrink: 0;
+}
+.description {
+	padding: 0 20px;
+}
+.description p a {
+	margin-left: 2px;
+}
+.description > * {
+	margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+	.details {
+		grid-template-columns: 1fr;
+	}
+	.description {
+		padding: 20px 0;
+	}
+}
