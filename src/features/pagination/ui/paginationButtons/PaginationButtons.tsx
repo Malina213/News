@@ -1,6 +1,4 @@
-import { Button } from '@/shared/ui/button'
-import { SlArrowLeft } from 'react-icons/sl'
-import { SlArrowRight } from 'react-icons/sl'
+import { Button } from '@/shared/ui/button/Button'
 import type { IPaginationProps } from '../../model/types'
 import styles from './PaginationButtons.module.css'
 
@@ -18,7 +16,7 @@ export const PaginationButtons = ({
 				disabled={currentPage === 1}
 				onClick={handlePreviousPage}
 			>
-				<SlArrowLeft />
+				{`<`}
 			</Button>
 			<div className={`flex-center ${styles.pagination__numbers}`}>
 				{[...Array(totalPages)].map((_, index) => {
@@ -39,7 +37,7 @@ export const PaginationButtons = ({
 				disabled={currentPage === totalPages}
 				onClick={handleNextPage}
 			>
-				<SlArrowRight />
+				{`>`}
 			</Button>
 		</div>
 	)
