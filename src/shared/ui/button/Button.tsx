@@ -1,9 +1,9 @@
-import type { ReactNode, ButtonHTMLAttributes } from 'react'
+import type { ReactNode, ButtonHTMLAttributes, MouseEventHandler } from 'react'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	className?: string
 	disabled?: boolean
-	onClick?: () => void
+	onClick?: MouseEventHandler<HTMLButtonElement>
 	children?: ReactNode
 }
 

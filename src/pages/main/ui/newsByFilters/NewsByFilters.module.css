@@ -4,8 +4,3 @@
 	flex-direction: column;
 	justify-content: space-between;
 }
-.newsByFilters__slider {
-	width: clamp(20rem, -8.194rem + 64.44vw, 56.25rem);
-	margin: 0 auto;
-	padding: 0 1rem;
-}
