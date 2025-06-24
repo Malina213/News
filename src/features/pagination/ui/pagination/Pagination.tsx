@@ -1,6 +1,5 @@
 import { PaginationButtons } from '../..'
 import type { IPaginationProps } from '../../model/types'
-import styles from './Pagination.module.css'
 
 interface Props {
 	children: React.ReactNode
@@ -16,10 +15,10 @@ export const Pagination = ({
 	paginationProps
 }: Props) => {
 	return (
-		<div className={styles.paginationWrapper}>
+		<>
 			{top && <PaginationButtons {...paginationProps} />}
 			{children}
 			{bottom && <PaginationButtons {...paginationProps} />}
-		</div>
+		</>
 	)
 }

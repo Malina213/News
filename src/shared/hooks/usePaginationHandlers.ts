@@ -1,21 +1,19 @@
 import type { IFilters } from '../interfaces'
 import { setFilters } from '../../entities/news/model/newsSlice'
 import { useAppDispatch } from '@/app/appStore'
+import { TOTAL_PAGES } from '../constants/constants'
 
-export const usePaginationHandlers = (
-	filters: IFilters,
-	totalPages: number
-) => {
+export const usePaginationHandlers = (filters: IFilters) => {
 	const dispatch = useAppDispatch()
 
-	const setPage = (page: number) => {
-		if (page >= 1 && page <= totalPages) {
-			dispatch(setFilters({ key: 'page_number', value: page }))
+	const setPage = (page_number: number) => {
+		if (page_number >= 1 && page_number <= TOTAL_PAGES) {
+			dispatch(setFilters({ key: 'page_number', value: page_number }))
 		}
 	}
 
 	const handleNextPage = () => {
-		if (filters.page_number < totalPages) {
+		if (filters.page_number < TOTAL_PAGES) {
 			setPage(filters.page_number + 1)
 		}
 	}
@@ -26,8 +24,10 @@ export const usePaginationHandlers = (
 		}
 	}
 
-	const handlePageClick = (pageNumber: number) => {
-		setPage(pageNumber)
+	const handlePageClick = (page_number: number) => {
+		if (page_number >= 1 && page_number <= TOTAL_PAGES) {
+			dispatch(setFilters({ key: 'page_number', value: page_number }))
+		}
 	}
 
 	return {
