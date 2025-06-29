@@ -10,7 +10,7 @@ export const newsApi = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
 	endpoints: builder => ({
 		getNews: builder.query<NewsApiResponse, ParamsType>({
-			keepUnusedDataFor: 0,
+			keepUnusedDataFor: 60,
 			query: params => {
 				const {
 					page_number = 1,

@@ -1,8 +1,10 @@
-import { useTheme } from '@/app/providers/ThemeProvider'
 import styles from './ThemeToggleCheckbox.module.css'
+import { useAppDispatch, useAppSelector } from '@/app/appStore'
+import { toggleTheme } from '../../model/themeSlice'
 
 export const ThemeToggleCheckbox = () => {
-	const { isDark, toggleTheme } = useTheme()
+	const dispatch = useAppDispatch()
+	const isDark = useAppSelector(state => state.theme.isDark)
 
 	return (
 		<div className={`flex-center ${styles.toggleWrapper}`}>
@@ -10,7 +12,7 @@ export const ThemeToggleCheckbox = () => {
 				type='checkbox'
 				className={styles.toggleCheckbox}
 				checked={isDark}
-				onChange={toggleTheme}
+				onChange={() => dispatch(toggleTheme())}
 				id='toggle'
 			/>
 			<div
