@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+DK+Loopet:wght@100..400&display=swap');
 
 :root[data-theme='light'] {
-	/* Existing variables */
 	--color-background: #ffffff;
 	--сolor-background-white-ligth: #f2f4f5;
 	--color-background-light: #d0e8f3;
@@ -10,7 +9,6 @@
 	--color-accent: cadetblue;
 	--color-categories: #000000;
 
-	/* New accent shades */
 	--color-accent-light-bg: #e7e7ff;
 	--color-accent-hover: #8b77f1;
 	--color-accent-active: #6b4eff;
@@ -24,24 +22,23 @@
 	);
 }
 :root[data-theme='dark'] {
-	--color-background: #181a1b; /* основной фон */
-	--color-background-light: #23272a; /* светлый фон для карточек/элементов */
-	--сolor-background-white-ligth: #3d454b; /* аналог светлого для темной темы */
-	--color-text-primary: #f2f4f5; /* основной текст */
-	--color-text-secondary: #b0b3b8; /* вторичный текст */
-	--color-accent: #8b77f1; /* акцент (можно оставить как есть) */
+	--color-background: #181a1b;
+	--color-background-light: #23272a;
+	--сolor-background-white-ligth: #3d454b;
+	--color-text-primary: #f2f4f5;
+	--color-text-secondary: #b0b3b8;
+	--color-accent: #8b77f1;
 	--color-categories: #8b77f1;
 
-	--color-accent-light-bg: #282a36; /* акцентный светлый фон */
-	--color-accent-hover: #a393fa; /* акцент при наведении */
-	--color-accent-active: #6b4eff; /* акцент при клике */
+	--color-accent-light-bg: #282a36;
+	--color-accent-hover: #a393fa;
+	--color-accent-active: #6b4eff;
 	--background-gradient: linear-gradient(
 		-90deg,
 		#4b2c82 0%,
-		/* насыщенный тёмно-фиолетовый */ #3a1f6b 40%,
-		/* глубокий тёмный фиолетовый */ #2e1a47 70%,
-		/* очень тёмный фиолетовый */ #1c1030 100%
-			/* почти чёрный с фиолетовым оттенком */
+		#3a1f6b 40%,
+		#2e1a47 70%,
+		#1c1030 100%
 	);
 }
 @keyframes fadeIn {
