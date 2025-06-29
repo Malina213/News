@@ -1,16 +1,16 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { ThemeProvider } from './providers/ThemeProvider'
 import { Router } from './appRouter'
 import { StoreProvider } from './providers/StoreProvider'
+import { ThemeHandler } from '@/entities/theme/ui/themeHandlers/ThemeHandlers'
 import '../shared/assets/styles/index.css'
 
 createRoot(document.getElementById('root')!).render(
 	<StrictMode>
-		<ThemeProvider>
-			<StoreProvider>
+		<StoreProvider>
+			<ThemeHandler>
 				<Router />
-			</StoreProvider>
-		</ThemeProvider>
+			</ThemeHandler>
+		</StoreProvider>
 	</StrictMode>
 )
